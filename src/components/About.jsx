@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Building, Target, ShieldCheck, Users } from 'lucide-react';
-
+import { Building, ShieldCheck, Users } from 'lucide-react';
 export default function About() {
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -16,19 +15,11 @@ export default function About() {
       },
     },
   };
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 20, transition: { duration: 0.6 } },
   };
-
   const features = [
-    {
-      icon: <Target size={32} className="text-brand-blue" />,
-      title: 'Precisão e Foco',
-      description:
-        'Cada detalhe é meticulosamente planejado e executado para garantir resultados que superam as expectativas.',
-    },
     {
       icon: <ShieldCheck size={32} className="text-brand-blue" />,
       title: 'Segurança Inegociável',
@@ -48,7 +39,6 @@ export default function About() {
         'Nossa experiência se traduz em uma execução impecável, entregando projetos no prazo e com a máxima qualidade.',
     },
   ];
-
   return (
     <section id="about" className="section-padding bg-white">
       <motion.div
@@ -75,8 +65,7 @@ export default function About() {
             compromisso absoluto com a satisfação do cliente.
           </motion.p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <motion.div
               key={index}
